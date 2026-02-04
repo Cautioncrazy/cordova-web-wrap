@@ -18,3 +18,6 @@ gen
 # cordova
 /platforms
 /plugins
+test_output/
+__pycache__/
+*.pyc

@@ -1,4 +1,51 @@
-# Cordova Web Wrap
+# Cordova Web Wrap & Builder
+
+This repository contains:
+1.  **Cordova Web Wrap**: A template for wrapping websites into mobile apps.
+2.  **GUI Builder**: A user-friendly tool to automate the wrapping process.
+
+## GUI Builder Usage
+
+The GUI Builder allows you to easily wrap a local website (HTML/CSS/JS) into a Cordova app without manually editing config files.
+
+### Requirements
+
+- Python 3.x
+- Node.js & NPM (The builder will check for these)
+
+### Installation
+
+1.  Install Python dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+    (Note: `customtkinter` is optional but recommended for a modern UI. If not installed, it falls back to standard Tkinter.)
+
+### Running the Builder
+
+Run the following command:
+
+```bash
+python builder_gui.py
+```
+
+### Steps
+
+1.  **Select Website Folder**: Choose the folder containing your website's assets (must have an `index.html`).
+2.  **Output Folder**: The builder will suggest a destination folder (e.g., `MyGame Wrapped`). You can change this.
+3.  **App Settings**: Enter the App Name, ID (e.g., `com.example.game`), and Version.
+4.  **Wrap App**: Click the button. The builder will:
+    -   Create the new project structure.
+    -   Copy your website files.
+    -   Configure `config.xml`, `package.json`, and `index.js`.
+    -   Install dependencies (`npm install`).
+    -   Prepare the Cordova project.
+
+Once finished, click "Open Folder" to view your ready-to-build Cordova project.
+
+---
+
+# Original README
 
 This app is a light-weight [Cordova](http://cordova.apache.org/) wrapper around a
 mobile website. It can be useful to add functionality that only works in apps, like
